@@ -1,0 +1,194 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    background-color: #000000;
+
+    color: #EEEEEE;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 20px;
+
+}
+
+
+
+.soueu {
+
+    background-color: #000000;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    border: 1px solid #DDDDDD;
+
+    box-shadow: 0 8px 32px rgba(203, 41, 87, 0.2);
+
+    text-align: center;
+
+}
+
+
+
+.fotoPerfil {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #CB2957;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+h1 {
+
+    color: #EEEEEE;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.bio {
+
+    color: #CB2957;
+
+    font-weight: 600;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+p {
+
+    line-height: 1.6;
+
+    color: #DDDDDD;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+h2 {
+
+    color: #EEEEEE;
+
+    font-size: 1.5rem;
+
+    margin-top: 30px;
+
+    margin-bottom: 15px;
+
+    /* Linha de separação com a cor de destaque */
+
+    border-bottom: 2px solid #CB2957;
+
+    padding-bottom: 8px;
+
+    text-align: left;
+
+}
+
+
+
+.meus-hobbis, .rotina {
+
+    text-align: left;
+
+    margin-bottom: 25px;
+
+    padding-left: 20px;
+
+    color: #DDDDDD;
+
+    line-height: 1.8;
+
+}
+
+
+
+.meus-hobbis li::marker, .rotina li::marker {
+
+    color: #CB2957;
+
+    font-weight: bold;
+
+}
+
+
+
+a {
+
+    display: inline-block;
+
+    background-color: #CB2957;
+
+    color: #EEEEEE;
+
+    text-decoration: none;
+
+    padding: 12px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+    margin: 10px 5px;
+
+}
+
+
+
+a:hover {
+
+    background-color: #EEEEEE;
+
+    color: #000000;
+
+    transform: translateY(-3px);
+
+} 
+
