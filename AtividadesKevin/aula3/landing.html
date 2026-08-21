@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Churrasco</title>
+</head>
+
+<body>
+    <div class="convite">
+        <Header class="cabecalho">
+            <h1>Churrasco de Aniversario</h1>
+            <p>Data: 29/08/2006</p>
+            <p>Local: Rua guilherme probts 338</p>
+        </Header>
+        <nav class="rodape">
+            <a href="#home">Home</a>
+            <a href="#pix">Pix</a>
+            <a href="#Contato">Contato</a>
+        </nav>
+        <main>
+            <section id="pragramacao">
+                <h2>Planejamento</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Horario</th>
+                            <th>Atividade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>18h00</td>
+                            <td>Abertura</td>
+                        </tr>
+
+                        <tr>
+                            <td>00h00</td>
+                            <td>Fim da Noite</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="confirmacao">
+                <h2>Confirmação</h2>
+                <article>
+                    <h3>Aviso</h3>
+                    <p>Confirme a presença com uma semana de antecedencia para organização.</p>
+                </article>
+                <aside>
+                    <p>😡 Quem confirma no dia vai fica na calçada.😡</p>
+                </aside>
+            </section>
+
+            <section id="presenca">
+                <form action="/confirmacao" method="post">
+                    <fieldset>
+                        <legend>Confirme sua Presença</legend>
+
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="convidado">Comparecerá com convidado:</label>
+
+                        <input type="radio" id="sim" name="resposta" value="sim">
+                        <label for="sim">Sim</label>
+
+                        <input type="radio" id="nao" name="resposta" value="nao">
+                        <label for="nao">Não</label>
+                        <button type="button">Confirmar</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <footer class="rodapé">
+            <fieldset>
+                <legend>Em Caso de Duvidas</legend>
+                <a href="https://wa.me/5547988123754">Whatsapp</a>
+            </fieldset>
+        </footer>
+    </div>
+</body>
+
+</html>
