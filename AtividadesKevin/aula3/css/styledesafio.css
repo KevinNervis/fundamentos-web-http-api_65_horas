@@ -1,0 +1,231 @@
+/* --- CONFIGURAÇÕES GLOBAIS & CORES --- */
+html {
+    scroll-behavior: smooth; /* Ativa a transição suave para todas as âncoras da página */
+}
+
+/* Variáveis de cores para fácil manutenção e consistência visual */
+:root {
+    --bg-color: #FFF8F0;
+    --primary-color: #C08552;
+    --secondary-color: #8C5A3C;
+    --dark-color: #4B2E2B;
+}
+
+/* --- RESET DE ESTILOS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte legível e moderna */
+    background-color: var(--bg-color); /* Cor de fundo*/
+    color: var(--dark-color); /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas*/
+}
+
+/* --- CABEÇALHO --- */
+.cabecalho {
+    background-color: var(--dark-color); /* Cor de fundo do cabeçalho */
+    color: var(--bg-color); /* Cor do texto do cabeçalho */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    padding: 2.5rem 1rem; /* Espaçamento interno do cabeçalho */
+}
+
+/* --- ESTILOS DE TÍTULOS E PARÁGRAFOS --- */
+.cabecalho h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- ESTILOS DE PARÁGRAFOS --- */
+.cabecalho p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+nav.rodape { 
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.rodape a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* --- EFEITO DE HOVER NOS LINKS DO RODAPÉ --- */
+nav.rodape a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(75, 46, 43, 0.08);
+}
+
+h2 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+}
+
+p, ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- TABELAS --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+tr:hover {
+    background-color: #faf5f0;
+}
+
+/* --- AVISO / ASIDE --- */
+aside {
+    background-color: var(--bg-color);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* --- FORMULÁRIO DE INSCRIÇÃO --- */
+form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Formulario estilizado usando o type como seletor*/
+form input[type="text"], /* Campo de texto */
+form input[type="email"], /* Campo de email */
+form input[type="tel"], /* Campo de telefone */
+form input[type="file"] /* Campo de upload de arquivo */
+{ 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Efeito de foco nos campos do formulário */
+form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(192, 133, 82, 0.3);
+}
+
+/* --- BOTÃO DE ENVIO --- */
+.botao {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.botao:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- RODAPÉ --- */
+footer.rodape {
+    background-color: var(--dark-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+/* --- ESTILOS DO RODAPÉ --- */
+footer.rodape fieldset {
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    max-width: 300px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 6px;
+}
+
+/* --- ESTILOS DE LEGENDAS E LINKS NO RODAPÉ --- */
+footer.rodape legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+footer.rodape a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer.rodape a:hover {
+    text-decoration: underline;
+}
+
+footer.rodape p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
