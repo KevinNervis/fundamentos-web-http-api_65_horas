@@ -13,87 +13,131 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-
 }
+
 body {
-    background-color: #000000;
+    background-color: var(--fundo-principal);
     color: var(--texto-principal);
     font-family: Arial, sans-serif;
     text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "navbar"
+        "conteudo";
+    min-height: 100vh;
 }
 
 .navbar {
+    grid-area: navbar;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 16px 24px;
     background-image: linear-gradient(135deg, var(--fundo-secundario), #000000);
     box-shadow: 0 0 15px 4px var(--destaque);
 }
 
 .logo a {
-  color: rgba(219, 15, 15, 0.767);
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+    color: rgba(219, 15, 15, 0.767);
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0.5rem; 
-  align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .nav-links a {
-  color: var(--texto-secundario);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  position: relative;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.07); 
+    background-color: rgba(255, 255, 255, 0.07);
 }
 
 .nav-links a:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 #cards {
+    grid-area: conteudo;
+
     background-color: #151B26;
     width: 90%;
     margin: 30px auto;
     padding: 30px;
-    border: 1px solid #313452;
+    border: 1px solid var(--fundo-variante);
     border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+
+    grid-template-areas:
+        "titulo titulo titulo"
+        "hollow hollow hollow"
+        "silksong silksong silksong"
+        "oculto oculto oculto"
+        "destaque destaque destaque";
+
+    gap: 20px;
 }
 
 
-h1 {
+#cards > h1 {
+    grid-area: titulo;
+
     color: var(--titulo);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+#cards > .hollow {
+    grid-area: hollow;
+}
+
+#cards > .silksong {
+    grid-area: silksong;
+}
+
+#cards > .oculto {
+    grid-area: oculto;
+}
+
+#cards > .destaque {
+    grid-area: destaque;
 }
 
 .jogo {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.jogo>h2 {
+.jogo > h2 {
     color: var(--titulo);
     margin-bottom: 15px;
 }
 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .card {
     padding: 15px;
-    margin: 10px;
-    display: inline-block;
-    vertical-align: top;
     border: 2px solid var(--texto-secundario);
     border-radius: 10px;
 }
@@ -104,9 +148,8 @@ h1 {
 }
 
 .card img {
-    width: 100%;
-    height: 330px;
-    object-fit: contain;
+    max-width: 100%;
+    height: auto;
 }
 
 .card p {
@@ -115,11 +158,11 @@ h1 {
 }
 
 .hollow .card {
-    background-color: #1D2D44;
+    background-color: var(--fundo-secundario);
 }
 
 .silksong .card {
-    background-color: #313452;
+    background-color: var(--fundo-variante);
 }
 
 .oculto {
@@ -130,4 +173,71 @@ h1 {
     display: inline;
     color: var(--destaque);
     font-weight: bold;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    #cards {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "titulo"
+            "hollow"
+            "silksong"
+            "oculto"
+            "destaque";
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+/*Celular*/
+@media (max-width: 480px) {
+
+    #cards {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .jogo > h2 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
 }
