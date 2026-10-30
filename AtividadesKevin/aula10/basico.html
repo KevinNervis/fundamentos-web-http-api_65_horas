@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basico</title>
+</head>
+<body>
+    <main>
+        
+        <h1>Portal da Escola</h1>
+        <h2>Atividade 1</h2>
+        <p id="mensagem">Aguardando sua visita...</p>
+        <button onclick=darBoasVindas()>Entrar</button>
+
+
+        <h2>Atividade 2</h2>
+        <label for="aluno">Seu nome:</label>
+        <input type="text" id="nome">
+        <button onclick=comprimentarAluno()>Comprimentrar</button>
+        <p id="saudacao"></p>
+
+        <h3>Atividade 3</h3>
+        <label for="quantidade">Quantidade: </label>
+        <input type="number"  id="quantidade">
+        <button onclick=calcularQuantidade()>Calcular compra</button>
+        <p id="total"></p>
+
+        <h2>Atividade 4 </h2>
+        <p id="status" style="color: green;">Inscrições abertas</p>
+        <button onclick=Encerrar()>Encerrar inscrições</button>
+        <button onclick=Reabrir()>Reabrir inscrições</button>
+
+        <h1>Pontuação da turma</h1>
+        
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
